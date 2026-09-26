@@ -1,0 +1,185 @@
+<!-- Made with Brush, from the makers of Playcut: https://playcut.ai -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="800" fill="#f5f6fa"/>
+
+  <g font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <!-- sidebar -->
+    <rect width="232" height="800" fill="#0f1424"/>
+    <rect x="24" y="26" width="34" height="34" rx="9" fill="url(#brand)"/>
+    <text x="41" y="49.5" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">N</text>
+    <text x="70" y="49" font-size="17" font-weight="700" fill="#ffffff">Northwind</text>
+
+    <rect x="16" y="94" width="200" height="40" rx="10" fill="#ffffff" fill-opacity="0.08"/>
+    <g font-size="14" font-weight="500">
+      <rect x="34" y="106" width="16" height="16" rx="4" fill="#ffffff"/>
+      <text x="62" y="119" fill="#ffffff" font-weight="600">Overview</text>
+      <rect x="34" y="150" width="16" height="16" rx="4" fill="none" stroke="#8b93a7" stroke-width="1.8"/>
+      <text x="62" y="163" fill="#8b93a7">Deals</text>
+      <rect x="34" y="194" width="16" height="16" rx="8" fill="none" stroke="#8b93a7" stroke-width="1.8"/>
+      <text x="62" y="207" fill="#8b93a7">Customers</text>
+      <rect x="34" y="238" width="16" height="16" rx="4" fill="none" stroke="#8b93a7" stroke-width="1.8"/>
+      <text x="62" y="251" fill="#8b93a7">Reports</text>
+      <rect x="34" y="282" width="16" height="16" rx="4" fill="none" stroke="#8b93a7" stroke-width="1.8"/>
+      <text x="62" y="295" fill="#8b93a7">Forecast</text>
+      <rect x="34" y="326" width="16" height="16" rx="8" fill="none" stroke="#8b93a7" stroke-width="1.8"/>
+      <text x="62" y="339" fill="#8b93a7">Settings</text>
+    </g>
+    <line x1="24" y1="716" x2="208" y2="716" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="48" cy="752" r="16" fill="url(#brand)"/>
+    <text x="48" y="757" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">DK</text>
+    <text x="74" y="748" font-size="14" font-weight="600" fill="#ffffff">Dana Kim</text>
+    <text x="74" y="766" font-size="12" fill="#8b93a7">Sales lead</text>
+
+    <!-- header -->
+    <text x="264" y="70" font-size="26" font-weight="800" fill="#0f1424">Sales overview</text>
+    <text x="264" y="94" font-size="13" fill="#7b8194">September 2026 · All regions</text>
+    <rect x="964" y="46" width="88" height="36" rx="10" fill="#4f46e5"/>
+    <text x="1008" y="69" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">Export</text>
+    <rect x="1064" y="46" width="184" height="36" rx="10" fill="#ffffff" stroke="#e4e6ee"/>
+    <rect x="1080" y="56" width="16" height="15" rx="3" fill="none" stroke="#4a4f5c" stroke-width="1.6"/>
+    <line x1="1080" y1="61" x2="1096" y2="61" stroke="#4a4f5c" stroke-width="1.6"/>
+    <text x="1106" y="69" font-size="13" font-weight="600" fill="#1f2433">Sep 1 – Sep 30</text>
+
+    <!-- KPI cards -->
+    <g>
+      <rect x="264" y="120" width="234" height="116" rx="16" fill="#ffffff"/>
+      <text x="284" y="150" font-size="13" fill="#7b8194">Revenue</text>
+      <text x="284" y="190" font-size="28" font-weight="800" fill="#0f1424">$1.28M</text>
+      <text x="284" y="216" font-size="12" font-weight="700" fill="#16a34a">▲ 12.4%</text>
+      <text x="340" y="216" font-size="12" fill="#9aa0ad">vs Aug</text>
+      <path d="M414 196 L426 190 L438 192 L450 180 L462 183 L474 170" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="514" y="120" width="234" height="116" rx="16" fill="#ffffff"/>
+      <text x="534" y="150" font-size="13" fill="#7b8194">New deals</text>
+      <text x="534" y="190" font-size="28" font-weight="800" fill="#0f1424">342</text>
+      <text x="534" y="216" font-size="12" font-weight="700" fill="#16a34a">▲ 8.1%</text>
+      <text x="584" y="216" font-size="12" fill="#9aa0ad">vs Aug</text>
+      <path d="M664 194 L676 196 L688 186 L700 188 L712 178 L724 176" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="764" y="120" width="234" height="116" rx="16" fill="#ffffff"/>
+      <text x="784" y="150" font-size="13" fill="#7b8194">Win rate</text>
+      <text x="784" y="190" font-size="28" font-weight="800" fill="#0f1424">31.6%</text>
+      <text x="784" y="216" font-size="12" font-weight="700" fill="#16a34a">▲ 2.3 pts</text>
+      <text x="846" y="216" font-size="12" fill="#9aa0ad">vs Aug</text>
+      <path d="M914 192 L926 188 L938 190 L950 184 L962 180 L974 178" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="1014" y="120" width="234" height="116" rx="16" fill="#ffffff"/>
+      <text x="1034" y="150" font-size="13" fill="#7b8194">Avg deal size</text>
+      <text x="1034" y="190" font-size="28" font-weight="800" fill="#0f1424">$3,740</text>
+      <text x="1034" y="216" font-size="12" font-weight="700" fill="#dc2626">▼ 1.2%</text>
+      <text x="1084" y="216" font-size="12" fill="#9aa0ad">vs Aug</text>
+      <path d="M1164 178 L1176 182 L1188 180 L1200 188 L1212 186 L1224 192" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- revenue chart -->
+    <rect x="264" y="256" width="648" height="320" rx="16" fill="#ffffff"/>
+    <text x="288" y="290" font-size="16" font-weight="700" fill="#0f1424">Revenue</text>
+    <text x="288" y="310" font-size="12" fill="#7b8194">Daily, September</text>
+    <circle cx="716" cy="286" r="4.5" fill="#6366f1"/>
+    <text x="726" y="290" font-size="12" fill="#4a4f5c">This month</text>
+    <line x1="808" y1="286" x2="824" y2="286" stroke="#b9bdcb" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="830" y="290" font-size="12" fill="#4a4f5c">Last month</text>
+
+    <g stroke="#eef0f5">
+      <line x1="304" y1="336" x2="888" y2="336"/>
+      <line x1="304" y1="387" x2="888" y2="387"/>
+      <line x1="304" y1="438" x2="888" y2="438"/>
+      <line x1="304" y1="489" x2="888" y2="489"/>
+      <line x1="304" y1="540" x2="888" y2="540" stroke="#e1e4ec"/>
+    </g>
+    <g font-size="11" fill="#9aa0ad" text-anchor="end">
+      <text x="296" y="340">$60k</text>
+      <text x="296" y="391">$45k</text>
+      <text x="296" y="442">$30k</text>
+      <text x="296" y="493">$15k</text>
+      <text x="296" y="544">0</text>
+    </g>
+    <g font-size="11" fill="#9aa0ad" text-anchor="middle">
+      <text x="304" y="560">Sep 1</text>
+      <text x="450" y="560">Sep 8</text>
+      <text x="596" y="560">Sep 15</text>
+      <text x="742" y="560">Sep 22</text>
+      <text x="888" y="560">Sep 30</text>
+    </g>
+
+    <path d="M304 500 L345.7 505 L387.4 495 L429.1 498 L470.9 490 L512.6 492 L554.3 485 L596 488 L637.7 480 L679.4 483 L721.1 476 L762.9 478 L804.6 470 L846.3 472 L888 466" fill="none" stroke="#b9bdcb" stroke-width="2" stroke-dasharray="4 3"/>
+    <path d="M304 480 L324.9 475 Q345.7 470 366.6 479 Q387.4 488 408.3 471.5 Q429.1 455 450 457.5 Q470.9 460 491.7 445 Q512.6 430 533.4 435 Q554.3 440 575.2 425 Q596 410 616.9 414 Q637.7 418 658.6 405 Q679.4 392 700.3 396 Q721.1 400 742 386 Q762.9 372 783.7 376 Q804.6 380 825.4 366 Q846.3 352 867.2 348 L888 344 L888 540 L304 540 Z" fill="url(#area)">
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" fill="freeze"/>
+    </path>
+    <path d="M304 480 L324.9 475 Q345.7 470 366.6 479 Q387.4 488 408.3 471.5 Q429.1 455 450 457.5 Q470.9 460 491.7 445 Q512.6 430 533.4 435 Q554.3 440 575.2 425 Q596 410 616.9 414 Q637.7 418 658.6 405 Q679.4 392 700.3 396 Q721.1 400 742 386 Q762.9 372 783.7 376 Q804.6 380 825.4 366 Q846.3 352 867.2 348 L888 344" fill="none" stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="700" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="700" to="0" dur="0.9s" fill="freeze"/>
+    </path>
+    <circle cx="888" cy="344" r="6" fill="#6366f1" stroke="#ffffff" stroke-width="3"/>
+    <rect x="786" y="392" width="90" height="42" rx="9" fill="#0f1424"/>
+    <text x="798" y="409" font-size="10" fill="#9aa0ad">Sep 30</text>
+    <text x="798" y="426" font-size="14" font-weight="700" fill="#ffffff">$57.6k</text>
+
+    <!-- pipeline donut -->
+    <rect x="928" y="256" width="320" height="320" rx="16" fill="#ffffff"/>
+    <text x="952" y="290" font-size="16" font-weight="700" fill="#0f1424">Pipeline by stage</text>
+    <text x="952" y="310" font-size="12" fill="#7b8194">Open deals</text>
+    <g transform="rotate(-90 1088 402)" fill="none" stroke-width="22">
+      <circle cx="1088" cy="402" r="70" stroke="#eef0f5"/>
+      <circle cx="1088" cy="402" r="70" stroke="#6366f1" stroke-dasharray="165.1 274.7"/>
+      <circle cx="1088" cy="402" r="70" stroke="#a855f7" stroke-dasharray="116.7 323.1" stroke-dashoffset="-167.1"/>
+      <circle cx="1088" cy="402" r="70" stroke="#38bdf8" stroke-dasharray="90.4 349.4" stroke-dashoffset="-285.8"/>
+      <circle cx="1088" cy="402" r="70" stroke="#10b981" stroke-dasharray="59.6 380.2" stroke-dashoffset="-378.2"/>
+    </g>
+    <text x="1088" y="404" text-anchor="middle" font-size="22" font-weight="800" fill="#0f1424">$4.6M</text>
+    <text x="1088" y="424" text-anchor="middle" font-size="12" fill="#7b8194">in pipeline</text>
+    <g font-size="12" fill="#4a4f5c">
+      <circle cx="958" cy="512" r="5" fill="#6366f1"/><text x="970" y="516">Prospect</text><text x="1076" y="516" text-anchor="end" font-weight="700" fill="#0f1424">38%</text>
+      <circle cx="1104" cy="512" r="5" fill="#a855f7"/><text x="1116" y="516">Qualified</text><text x="1224" y="516" text-anchor="end" font-weight="700" fill="#0f1424">27%</text>
+      <circle cx="958" cy="540" r="5" fill="#38bdf8"/><text x="970" y="544">Proposal</text><text x="1076" y="544" text-anchor="end" font-weight="700" fill="#0f1424">21%</text>
+      <circle cx="1104" cy="540" r="5" fill="#10b981"/><text x="1116" y="544">Closing</text><text x="1224" y="544" text-anchor="end" font-weight="700" fill="#0f1424">14%</text>
+    </g>
+
+    <!-- deals table -->
+    <rect x="264" y="596" width="984" height="176" rx="16" fill="#ffffff"/>
+    <text x="288" y="628" font-size="16" font-weight="700" fill="#0f1424">Top deals this month</text>
+    <g font-size="11" font-weight="700" letter-spacing="1" fill="#9aa0ad">
+      <text x="288" y="658">COMPANY</text>
+      <text x="600" y="658">OWNER</text>
+      <text x="820" y="658">STAGE</text>
+      <text x="1224" y="658" text-anchor="end">VALUE</text>
+    </g>
+    <g stroke="#eef0f5">
+      <line x1="288" y1="670" x2="1224" y2="670"/>
+      <line x1="288" y1="704" x2="1224" y2="704"/>
+      <line x1="288" y1="738" x2="1224" y2="738"/>
+    </g>
+    <g font-size="14">
+      <text x="288" y="692" font-weight="600" fill="#0f1424">Halcyon Labs</text>
+      <text x="600" y="692" fill="#4a4f5c">Dana Kim</text>
+      <rect x="820" y="678" width="64" height="20" rx="10" fill="#d1fae5"/>
+      <text x="852" y="692" text-anchor="middle" font-size="11" font-weight="700" fill="#047857">Closing</text>
+      <text x="1224" y="692" text-anchor="end" font-weight="700" fill="#0f1424">$184,000</text>
+
+      <text x="288" y="726" font-weight="600" fill="#0f1424">Brightline Health</text>
+      <text x="600" y="726" fill="#4a4f5c">Omar Diaz</text>
+      <rect x="820" y="712" width="70" height="20" rx="10" fill="#e0f2fe"/>
+      <text x="855" y="726" text-anchor="middle" font-size="11" font-weight="700" fill="#0369a1">Proposal</text>
+      <text x="1224" y="726" text-anchor="end" font-weight="700" fill="#0f1424">$126,500</text>
+
+      <text x="288" y="760" font-weight="600" fill="#0f1424">Kestrel Freight</text>
+      <text x="600" y="760" fill="#4a4f5c">Priya Rao</text>
+      <rect x="820" y="746" width="74" height="20" rx="10" fill="#f3e8ff"/>
+      <text x="857" y="760" text-anchor="middle" font-size="11" font-weight="700" fill="#7e22ce">Qualified</text>
+      <text x="1224" y="760" text-anchor="end" font-weight="700" fill="#0f1424">$98,200</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playcut Brush</title>
+<style>
+  :root { --bg: #0e0f12; --ink: #e8eaed; --muted: #8a8f98; --accent: #6cf5a2; --warn: #ff8a7a; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 13px -apple-system, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+  }
+  #stage { position: fixed; inset: 0; display: grid; place-items: center; }
+  #design { display: none; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 0 1px #262a31; }
+  #design.live { display: block; }
+  #idle {
+    position: fixed; inset: 0;
+    display: grid; place-content: center; gap: 8px;
+    text-align: center; color: var(--muted);
+  }
+  #idle b { color: var(--ink); font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+  .pill {
+    position: fixed; top: 14px; left: 16px;
+    display: flex; align-items: center; gap: 8px;
+    max-width: calc(100vw - 32px);
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(14, 15, 18, 0.72);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #555; flex: none; }
+  .on .dot { background: var(--accent); }
+  #error { color: var(--warn); overflow: hidden; text-overflow: ellipsis; }
+  .credit { position: fixed; right: 16px; bottom: 14px; color: var(--muted); font-size: 12px; text-decoration: none; }
+  .credit:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+  <div id="idle"><b>Waiting for a design</b><span>Ask your agent to design something. It shows up here.</span></div>
+  <div id="stage"><img id="design" alt="current design"></div>
+  <div class="pill" id="pill"><span class="dot"></span><span>brush</span><span id="name"></span><span id="error"></span></div>
+  <a class="credit" href="https://playcut.ai" target="_blank" rel="noopener">Playcut Brush · playcut.ai</a>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const img = $('design');
+const SNAPSHOT_EDGE = 1200; // px on the long side
+let current = null;
+let size = [800, 600];
+
+function fit() {
+  const [w, h] = size;
+  const s = Math.min((innerWidth - 64) / w, (innerHeight - 112) / h);
+  img.style.width = `${Math.max(1, w * s)}px`;
+  img.style.height = `${Math.max(1, h * s)}px`;
+}
+addEventListener('resize', fit);
+
+// Parse strictly as XML, so what shows here is also a valid standalone .svg file.
+function parse(code) {
+  code = code.trim();
+  if (!/<svg\b[^>]*\sxmlns=/.test(code)) code = code.replace(/<svg\b/, '<svg xmlns="http://www.w3.org/2000/svg"');
+  if (code.includes('xlink:') && !code.includes('xmlns:xlink')) code = code.replace(/<svg\b/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+  const doc = new DOMParser().parseFromString(code, 'image/svg+xml');
+  const failure = doc.querySelector('parsererror');
+  if (failure) {
+    const text = failure.textContent.replace(/\s+/g, ' ');
+    throw new Error((text.match(/error on line.*?(?=Below is|$)/i)?.[0] || text).trim().slice(0, 300));
+  }
+  const root = doc.documentElement;
+  if (root.localName !== 'svg') throw new Error('root element is not <svg>');
+  const vb = (root.getAttribute('viewBox') || '').trim().split(/[\s,]+/).map(Number);
+  const w = vb.length === 4 && vb[2] > 0 ? vb[2] : parseFloat(root.getAttribute('width')) || 800;
+  const h = vb.length === 4 && vb[3] > 0 ? vb[3] : parseFloat(root.getAttribute('height')) || 600;
+  // A concrete size makes the snapshot crisp; on screen, CSS scales the vector.
+  const scale = SNAPSHOT_EDGE / Math.max(w, h);
+  root.setAttribute('width', Math.round(w * scale));
+  root.setAttribute('height', Math.round(h * scale));
+  return { svg: new XMLSerializer().serializeToString(doc), w, h };
+}
+
+function render(design) {
+  if (design.id === current) return; // same design re-sent on reconnect
+  current = design.id;
+  let parsed;
+  try {
+    parsed = parse(design.code);
+  } catch (err) {
+    return fail(design.id, err.message);
+  }
+  const url = URL.createObjectURL(new Blob([parsed.svg], { type: 'image/svg+xml' }));
+  const next = new Image();
+  next.onload = () => {
+    if (design.id !== current) return URL.revokeObjectURL(url);
+    const previous = img.src;
+    size = [parsed.w, parsed.h];
+    fit();
+    img.src = url;
+    img.classList.add('live');
+    $('idle').hidden = true;
+    $('name').textContent = `· ${design.name}`;
+    $('error').textContent = '';
+    document.title = `${design.name} · Playcut Brush`;
+    if (previous.startsWith('blob:')) URL.revokeObjectURL(previous);
+    setTimeout(() => snapshot(design.id), 1100); // let entrance animations land
+  };
+  next.onerror = () => fail(design.id, 'the browser could not draw this SVG');
+  next.src = url;
+}
+
+// Draw the on-screen image (mid-animation, as the user sees it) into a PNG the agent can review.
+function snapshot(id) {
+  if (id !== current) return;
+  try {
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    report({ id, png: canvas.toDataURL('image/png').split(',')[1] });
+  } catch {
+    report({ id, png: null }); // e.g. a tainted canvas; the design is still on screen
+  }
+}
+
+function fail(id, message) {
+  $('error').textContent = `· ${message}`;
+  $('error').title = message;
+  report({ id, error: message });
+}
+
+function report(data) {
+  fetch('/report', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(data),
+  }).catch(() => {});
+}
+
+const events = new EventSource('/events');
+events.onopen = () => $('pill').classList.add('on');
+events.onerror = () => $('pill').classList.remove('on');
+events.onmessage = (e) => {
+  try { render(JSON.parse(e.data)); } catch {}
+};
+</script>
+</body>
+</html>

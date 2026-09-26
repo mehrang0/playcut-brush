@@ -1,0 +1,10 @@
+{
+  "name": "brush",
+  "displayName": "Playcut Brush",
+  "description": "Playcut Brush: your agent designs in SVG and you watch it live in a local browser tab. No API keys.",
+  "author": { "name": "Mehran G" },
+  "homepage": "https://github.com/mehrang0/playcut-brush",
+  "repository": "https://github.com/mehrang0/playcut-brush",
+  "license": "Apache-2.0",
+  "keywords": ["design", "svg", "artboard", "logo", "poster", "mockup", "playcut"]
+}

@@ -1,0 +1,102 @@
+<!-- Made with Brush, from the makers of Playcut: https://playcut.ai -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6a3d"/>
+      <stop offset="0.5" stop-color="#ff3d8b"/>
+      <stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b0b10"/>
+  <circle cx="1010" cy="170" r="460" fill="url(#glowA)"/>
+  <circle cx="720" cy="640" r="380" fill="url(#glowB)"/>
+
+  <!-- the stroke, painted on -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M640 575 C760 470 830 575 930 470 S1090 330 1165 292" stroke="url(#paint)" stroke-width="86" stroke-dasharray="760" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="760" to="0" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1" keyTimes="0;1"/>
+    </path>
+    <g stroke="#ffffff" stroke-dasharray="760" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="760" to="0" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1" keyTimes="0;1"/>
+      <path d="M646 558 C766 453 836 558 936 453 S1096 313 1171 275" stroke-width="3" stroke-opacity="0.35"/>
+      <path d="M636 590 C756 485 826 590 926 485 S1086 345 1161 307" stroke-width="2" stroke-opacity="0.22"/>
+      <path d="M650 572 C770 467 840 572 940 467 S1100 327 1175 289" stroke-width="5" stroke-opacity="0.12"/>
+    </g>
+  </g>
+  <g fill="url(#paint)">
+    <circle cx="1112" cy="236" r="9"/>
+    <circle cx="1140" cy="352" r="5"/>
+    <circle cx="612" cy="540" r="6"/>
+  </g>
+
+  <!-- miniature designs from the set -->
+  <g transform="translate(760 70) rotate(-7)">
+    <rect x="6" y="14" width="160" height="214" rx="12" fill="#000" opacity="0.5" filter="url(#shadow)"/>
+    <rect width="160" height="214" rx="12" fill="#1c3257"/>
+    <circle cx="44" cy="74" r="30" fill="#f2a541"/>
+    <circle cx="102" cy="66" r="48" fill="#0b0e14"/>
+    <circle cx="102" cy="66" r="15" fill="#f2a541"/>
+    <text x="14" y="168" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="50" font-weight="900" fill="#f4ead5">JAZZ</text>
+    <text x="16" y="198" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="900" fill="none" stroke="#f2a541" stroke-width="1.2" letter-spacing="1.5">NIGHT</text>
+  </g>
+
+  <g transform="translate(1000 214) rotate(7)">
+    <rect x="6" y="16" width="132" height="264" rx="24" fill="#000" opacity="0.5" filter="url(#shadow)"/>
+    <rect width="132" height="264" rx="24" fill="#f3f4f8"/>
+    <rect x="10" y="40" width="112" height="66" rx="13" fill="url(#card)"/>
+    <text x="20" y="62" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#ffffff" fill-opacity="0.75">Total balance</text>
+    <text x="20" y="84" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff">$24,806</text>
+    <g fill="#ffffff">
+      <circle cx="30" cy="130" r="11"/><circle cx="56" cy="130" r="11"/><circle cx="82" cy="130" r="11"/><circle cx="106" cy="130" r="11"/>
+      <rect x="10" y="156" width="112" height="92" rx="12"/>
+    </g>
+    <g fill="#e6e8f0">
+      <rect x="22" y="170" width="54" height="7" rx="3.5"/><rect x="22" y="196" width="68" height="7" rx="3.5"/><rect x="22" y="222" width="46" height="7" rx="3.5"/>
+    </g>
+    <g fill="#4f46e5"><rect x="96" y="170" width="16" height="7" rx="3.5"/><rect x="92" y="196" width="20" height="7" rx="3.5"/><rect x="98" y="222" width="14" height="7" rx="3.5"/></g>
+  </g>
+
+  <g transform="translate(700 300) rotate(-5)">
+    <rect x="5" y="12" width="104" height="104" rx="26" fill="#000" opacity="0.5" filter="url(#shadow)"/>
+    <rect width="104" height="104" rx="26" fill="#2b1d16"/>
+    <g transform="translate(52 52) rotate(-28) scale(0.3)">
+      <ellipse rx="92" ry="128" fill="#e8643a"/>
+      <path fill="#2b1d16" d="M8 -100 C30 -64 44 -30 40 6 C37 42 20 72 -2 84 C-24 74 -38 46 -36 14 C-34 -18 -12 -36 -4 -58 C0 -70 6 -84 8 -100 Z"/>
+      <path fill="#e8643a" d="M2 -10 C14 8 18 30 12 48 C8 60 0 66 -4 68 C-14 60 -20 46 -18 30 C-16 12 -6 4 2 -10 Z"/>
+    </g>
+  </g>
+
+  <!-- copy -->
+  <g font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="92" y="120" font-size="14" font-weight="700" letter-spacing="6" fill="#ff8a5c">INTRODUCING</text>
+    <text x="84" y="290" font-size="176" font-weight="900" letter-spacing="-5" fill="#ffffff">Brush</text>
+    <text x="92" y="354" font-size="36" font-weight="700" fill="#ffffff">Give your agent a paintbrush.</text>
+    <text x="92" y="404" font-size="20" fill="#b4b7c6">It designs in SVG. You watch it live in your browser.</text>
+    <text x="92" y="434" font-size="20" fill="#b4b7c6">No API keys. Runs on the plan you already have.</text>
+    <g font-size="14" font-weight="600" fill="#d8dae3">
+      <rect x="92" y="470" width="118" height="34" rx="17" fill="#16161f" stroke="#2a2a36"/>
+      <text x="151" y="492" text-anchor="middle">Claude Code</text>
+      <rect x="220" y="470" width="78" height="34" rx="17" fill="#16161f" stroke="#2a2a36"/>
+      <text x="259" y="492" text-anchor="middle">Codex</text>
+      <rect x="308" y="470" width="124" height="34" rx="17" fill="#16161f" stroke="#2a2a36"/>
+      <text x="370" y="492" text-anchor="middle">Open source</text>
+    </g>
+    <text x="92" y="582" font-size="15" fill="#8e92a3">from the makers of Playcut · playcut.ai</text>
+  </g>
+</svg>

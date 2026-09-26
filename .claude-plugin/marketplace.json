@@ -1,0 +1,12 @@
+{
+  "name": "playcut",
+  "description": "Playcut tools for your agent, from the makers of Playcut.",
+  "owner": { "name": "Mehran G" },
+  "plugins": [
+    {
+      "name": "brush",
+      "source": "./plugins/brush",
+      "description": "Playcut Brush: your agent designs in SVG and you watch it live in a local browser tab. No API keys."
+    }
+  ]
+}

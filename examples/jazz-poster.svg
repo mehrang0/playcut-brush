@@ -1,0 +1,64 @@
+<!-- Made with Brush, from the makers of Playcut: https://playcut.ai -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c3257"/>
+      <stop offset="1" stop-color="#0b1629"/>
+    </linearGradient>
+    <radialGradient id="vinyl" cx="0.4" cy="0.36" r="0.8">
+      <stop offset="0" stop-color="#262b36"/>
+      <stop offset="1" stop-color="#04060a"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg)"/>
+
+  <!-- rising sun -->
+  <circle cx="150" cy="280" r="118" fill="#f2a541">
+    <animate attributeName="cy" from="330" to="280" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+  </circle>
+
+  <!-- record -->
+  <circle cx="414" cy="254" r="192" fill="#000" opacity="0.5" filter="url(#soft)"/>
+  <circle cx="400" cy="236" r="192" fill="url(#vinyl)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.07">
+    <circle cx="400" cy="236" r="178"/>
+    <circle cx="400" cy="236" r="164"/>
+    <circle cx="400" cy="236" r="150"/>
+    <circle cx="400" cy="236" r="136"/>
+    <circle cx="400" cy="236" r="122"/>
+    <circle cx="400" cy="236" r="108"/>
+    <circle cx="400" cy="236" r="94"/>
+    <circle cx="400" cy="236" r="80"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 400 236" to="360 400 236" dur="12s" repeatCount="indefinite"/>
+    <path d="M400 236 L585.5 186.3 A192 192 0 0 1 585.5 285.7 Z" fill="url(#sheen)"/>
+    <path d="M400 236 L214.5 285.7 A192 192 0 0 1 214.5 186.3 Z" fill="url(#sheen)"/>
+  </g>
+  <circle cx="400" cy="236" r="62" fill="#f2a541"/>
+  <circle cx="400" cy="236" r="62" fill="none" stroke="#0b1629" stroke-opacity="0.25" stroke-width="6"/>
+  <text x="400" y="224" text-anchor="middle" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="800" letter-spacing="3" fill="#1c3257">SIDE A</text>
+  <text x="400" y="262" text-anchor="middle" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1c3257">33⅓</text>
+  <circle cx="400" cy="236" r="5" fill="#0b1629"/>
+
+  <!-- type -->
+  <g font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="48" y="64" font-size="13" font-weight="700" letter-spacing="4" fill="#f2a541">LANTERN ROOM PRESENTS</text>
+    <text x="34" y="566" font-size="214" font-weight="900" letter-spacing="-2" fill="#f4ead5">JAZZ</text>
+    <text x="42" y="684" font-size="136" font-weight="900" letter-spacing="6" fill="none" stroke="#f2a541" stroke-width="2.5">NIGHT</text>
+    <line x1="48" y1="712" x2="552" y2="712" stroke="#f4ead5" stroke-opacity="0.22"/>
+    <text x="48" y="742" font-size="18" font-weight="800" letter-spacing="1" fill="#f4ead5">FRI · OCT 17 · 9 PM</text>
+    <text x="552" y="742" text-anchor="end" font-size="13" font-weight="700" letter-spacing="2.5" fill="#f2a541">MARA QUINN TRIO</text>
+    <text x="48" y="768" font-size="13" fill="#f4ead5" fill-opacity="0.65">Doors 8:30 PM · Tickets $15</text>
+    <text x="552" y="768" text-anchor="end" font-size="13" fill="#f4ead5" fill-opacity="0.65">with Leo Park &amp; Solace</text>
+  </g>
+</svg>

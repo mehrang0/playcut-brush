@@ -1,0 +1,136 @@
+<!-- Made with Brush, from the makers of Playcut: https://playcut.ai -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="0.55" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+    <radialGradient id="avatar" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="lift" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="390" height="844" fill="#f3f4f8"/>
+
+  <g font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <!-- status bar -->
+    <text x="34" y="33" font-size="15" font-weight="600" fill="#12141a">9:41</text>
+    <g fill="#12141a">
+      <rect x="296" y="30" width="3" height="4" rx="1"/>
+      <rect x="301" y="28" width="3" height="6" rx="1"/>
+      <rect x="306" y="26" width="3" height="8" rx="1"/>
+      <rect x="311" y="24" width="3" height="10" rx="1"/>
+    </g>
+    <path d="M321 27.5 a10 10 0 0 1 15 0 M324.2 30.6 a5.6 5.6 0 0 1 8.6 0" fill="none" stroke="#12141a" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="328.5" cy="33.2" r="1.6" fill="#12141a"/>
+    <rect x="344" y="24" width="25" height="12" rx="3.5" fill="none" stroke="#12141a" stroke-opacity="0.4"/>
+    <rect x="346" y="26" width="19" height="8" rx="2" fill="#12141a"/>
+    <rect x="370.5" y="28" width="2" height="4" rx="1" fill="#12141a" fill-opacity="0.4"/>
+
+    <!-- greeting -->
+    <circle cx="44" cy="92" r="20" fill="url(#avatar)"/>
+    <text x="44" y="98" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">AR</text>
+    <text x="74" y="86" font-size="13" fill="#7a7f8e">Good morning,</text>
+    <text x="74" y="106" font-size="17" font-weight="700" fill="#12141a">Alex Rivera</text>
+    <circle cx="346" cy="92" r="20" fill="#ffffff"/>
+    <path d="M340 96 V91 C340 87 343 84 346 84 C349 84 352 87 352 91 V96 L354 98 H338 Z M344 101 H348" fill="none" stroke="#12141a" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="353" cy="84" r="4" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- balance card -->
+    <rect x="34" y="160" width="322" height="186" rx="28" fill="#6d28d9" opacity="0.35" filter="url(#blur)"/>
+    <rect x="20" y="132" width="350" height="200" rx="28" fill="url(#card)"/>
+    <circle cx="330" cy="150" r="90" fill="#ffffff" fill-opacity="0.07"/>
+    <circle cx="370" cy="300" r="60" fill="#ffffff" fill-opacity="0.05"/>
+    <text x="44" y="172" font-size="13" fill="#ffffff" fill-opacity="0.75">Total balance</text>
+    <text x="44" y="216" font-size="36" font-weight="800" letter-spacing="-0.5" fill="#ffffff">$24,806.19</text>
+    <rect x="44" y="232" width="128" height="26" rx="13" fill="#ffffff" fill-opacity="0.18"/>
+    <text x="58" y="250" font-size="12" font-weight="600" fill="#ffffff">+2.4% this month</text>
+    <path d="M232 204 C246 198 252 186 264 189 C276 192 282 176 294 172 C306 168 312 180 324 173 C334 167 340 160 346 157" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="140" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="140" to="0" dur="0.9s" fill="freeze"/>
+    </path>
+    <circle cx="346" cy="157" r="3.5" fill="#ffffff"/>
+    <text x="44" y="306" font-size="14" letter-spacing="2" fill="#ffffff" fill-opacity="0.85">•••• 4821</text>
+    <circle cx="318" cy="301" r="12" fill="#ffffff" fill-opacity="0.45"/>
+    <circle cx="334" cy="301" r="12" fill="#ffffff" fill-opacity="0.25"/>
+
+    <!-- quick actions -->
+    <g>
+      <circle cx="64" cy="388" r="26" fill="#6d28d9" opacity="0.12" filter="url(#lift)"/>
+      <circle cx="64" cy="384" r="26" fill="#ffffff"/>
+      <path d="M57 391 L71 377 M62 377 H71 V386" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="151" cy="388" r="26" fill="#6d28d9" opacity="0.12" filter="url(#lift)"/>
+      <circle cx="151" cy="384" r="26" fill="#ffffff"/>
+      <path d="M158 377 L144 391 M144 382 V391 H153" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="239" cy="388" r="26" fill="#6d28d9" opacity="0.12" filter="url(#lift)"/>
+      <circle cx="239" cy="384" r="26" fill="#ffffff"/>
+      <path d="M239 376 V392 M231 384 H247" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="326" cy="388" r="26" fill="#6d28d9" opacity="0.12" filter="url(#lift)"/>
+      <circle cx="326" cy="384" r="26" fill="#ffffff"/>
+      <g fill="#4f46e5"><circle cx="319" cy="384" r="2.3"/><circle cx="326" cy="384" r="2.3"/><circle cx="333" cy="384" r="2.3"/></g>
+    </g>
+    <g font-size="12" font-weight="600" fill="#4a4f5c" text-anchor="middle">
+      <text x="64" y="434">Send</text>
+      <text x="151" y="434">Request</text>
+      <text x="239" y="434">Top up</text>
+      <text x="326" y="434">More</text>
+    </g>
+
+    <!-- activity -->
+    <text x="20" y="482" font-size="18" font-weight="700" fill="#12141a">Recent activity</text>
+    <text x="370" y="482" text-anchor="end" font-size="14" font-weight="600" fill="#4f46e5">See all</text>
+
+    <rect x="20" y="498" width="350" height="264" rx="22" fill="#ffffff"/>
+    <g stroke="#eef0f4">
+      <line x1="84" y1="564" x2="350" y2="564"/>
+      <line x1="84" y1="630" x2="350" y2="630"/>
+      <line x1="84" y1="696" x2="350" y2="696"/>
+    </g>
+
+    <circle cx="56" cy="531" r="20" fill="#fdecE4"/>
+    <g transform="translate(56 531) rotate(-28)">
+      <ellipse rx="7.5" ry="10" fill="#2b1d16"/>
+      <path d="M0.6 -8 C2.6 -5 3.4 -2 3.1 0.6 C2.8 3.4 1.5 5.8 -0.2 6.7 C-1.9 5.9 -3 3.6 -2.8 1.1 C-2.6 -1.4 -0.9 -2.9 -0.3 -4.6 Z" fill="#e8643a"/>
+    </g>
+    <text x="86" y="527" font-size="15" font-weight="600" fill="#12141a">Ember Coffee</text>
+    <text x="86" y="546" font-size="12" fill="#8a8f9c">Today · 8:12 AM</text>
+    <text x="350" y="537" text-anchor="end" font-size="15" font-weight="700" fill="#12141a">−$6.50</text>
+
+    <circle cx="56" cy="597" r="20" fill="#dcfce7"/>
+    <text x="56" y="603" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">N</text>
+    <text x="86" y="593" font-size="15" font-weight="600" fill="#12141a">Salary · Northwind</text>
+    <text x="86" y="612" font-size="12" fill="#8a8f9c">Yesterday</text>
+    <text x="350" y="603" text-anchor="end" font-size="15" font-weight="700" fill="#16a34a">+$4,200.00</text>
+
+    <circle cx="56" cy="663" r="20" fill="#fce7f3"/>
+    <path d="M52 656 L62 663 L52 670 Z" fill="#db2777"/>
+    <text x="86" y="659" font-size="15" font-weight="600" fill="#12141a">Streamly</text>
+    <text x="86" y="678" font-size="12" fill="#8a8f9c">Sep 24 · Subscription</text>
+    <text x="350" y="669" text-anchor="end" font-size="15" font-weight="700" fill="#12141a">−$11.99</text>
+
+    <circle cx="56" cy="729" r="20" fill="#dbeafe"/>
+    <path d="M56 719 C51.6 719 48 722.4 48 726.8 C48 732.6 56 739 56 739 C56 739 64 732.6 64 726.8 C64 722.4 60.4 719 56 719 Z" fill="#2563eb"/>
+    <circle cx="56" cy="726.6" r="2.8" fill="#dbeafe"/>
+    <text x="86" y="725" font-size="15" font-weight="600" fill="#12141a">Metro Ride</text>
+    <text x="86" y="744" font-size="12" fill="#8a8f9c">Sep 23 · Downtown</text>
+    <text x="350" y="735" text-anchor="end" font-size="15" font-weight="700" fill="#12141a">−$18.40</text>
+
+    <!-- tab bar -->
+    <rect x="0" y="780" width="390" height="64" fill="#ffffff"/>
+    <line x1="0" y1="780" x2="390" y2="780" stroke="#eceef3"/>
+    <path d="M40 805 L49 797 L58 805 V814 H40 Z" fill="#4f46e5"/>
+    <rect x="136" y="799" width="21" height="15" rx="3" fill="none" stroke="#9aa0ad" stroke-width="2"/>
+    <line x1="136" y1="804" x2="157" y2="804" stroke="#9aa0ad" stroke-width="2"/>
+    <g fill="#9aa0ad"><rect x="235" y="806" width="4" height="8" rx="1.5"/><rect x="241" y="800" width="4" height="14" rx="1.5"/><rect x="247" y="803" width="4" height="11" rx="1.5"/></g>
+    <circle cx="341" cy="802" r="4.5" fill="none" stroke="#9aa0ad" stroke-width="2"/>
+    <path d="M332.5 815 C333.5 810 337 808 341 808 C345 808 348.5 810 349.5 815" fill="none" stroke="#9aa0ad" stroke-width="2" stroke-linecap="round"/>
+    <rect x="128" y="830" width="134" height="5" rx="2.5" fill="#12141a"/>
+  </g>
+</svg>
