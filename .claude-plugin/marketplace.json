@@ -5,7 +5,7 @@
   "plugins": [
     {
       "name": "brush",
-      "source": "./plugins/brush",
+      "source": "./",
       "description": "Playcut Brush: your agent designs in SVG and you watch it live in a local browser tab. No API keys."
     }
   ]

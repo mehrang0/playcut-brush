@@ -23,7 +23,7 @@ skill folder into your agent's skills directory. For Codex:
 
 ```sh
 git clone --depth 1 https://github.com/mehrang0/playcut-brush /tmp/playcut-brush
-mkdir -p ~/.agents/skills && cp -R /tmp/playcut-brush/plugins/brush/skills/brush ~/.agents/skills/brush
+mkdir -p ~/.agents/skills && cp -R /tmp/playcut-brush/skills/brush ~/.agents/skills/brush
 ```
 
 Needs [Node.js](https://nodejs.org) 18+ for the live browser tab. Without Node, Brush still works
