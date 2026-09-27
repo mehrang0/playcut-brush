@@ -87,6 +87,12 @@ your project (for example a logo in `public/`). The designs are yours to use how
 tab on your computer, so there the design shows up in the chat instead. The live tab needs a
 local agent like Claude Code or Codex.
 
+## Privacy and terms
+
+Brush collects no data. See the
+[Privacy Policy](https://github.com/mehrang0/playcut-brush/blob/main/PRIVACY.md) and
+[Terms of Use](https://github.com/mehrang0/playcut-brush/blob/main/TERMS.md).
+
 ## Contributing
 
 Issues and pull requests are welcome. Contributions are accepted under the same license.
